@@ -1,0 +1,28 @@
+
+<html>
+<script>
+	function check(){
+			let result=true;
+			if(document.getElementById("A").value==""){
+				document.getElementById("errorName").style.visibility='visible';
+				result=false;
+			}
+			if(document.getElementById("B").value==""){
+				document.getElementById("errorMail").style.visibility='visible';
+				result=false;
+		}
+		if(document.getElementById("C").value==""){
+				document.getElementById("errorAddress").style.visibility='visible';
+				result=false;
+	}
+	return result;
+
+}
+</script>
+<form action = "www.bbc.co.uk" method="post" onsubmit="return check()">
+	name:<input id="A"> <span id="errorName" style=" color:red; visibility:hidden"> ** </span> <br>
+	email:<input id="B"> <span id="errorMail" style=" color:red; visibility:hidden"> ** </span> <br>
+	address:<input id="C"> <span id="errorAddress" style=" color:red; visibility:hidden"> ** </span> <br>
+<input type="submit">
+</form>
+</html>
